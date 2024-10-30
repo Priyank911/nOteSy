@@ -1,13 +1,37 @@
+/* Dark Theme and Global Styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  background-color: #3e3e3e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #5c5c5c;
+}
+
+.editor-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+}
+
+.preview {
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  margin-top: 20px;
 }
