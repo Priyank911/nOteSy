@@ -1,0 +1,94 @@
+.nav {
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Logo (Brand) styling */
+  .brand {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    width: 120px; /* Adjust the size of your logo */
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* Links and Button styles */
+  .nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: transform 0.3s;
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.1);
+    background: #333;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .add-note-button {
+    background: #6a0dad;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .add-note-button:hover {
+    background: #8b5fbf;
+    transform: scale(1.05);
+  }
+  
+  /* Divider line */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #ffffff;
+    margin-top: 5px;
+  }
+  
+  /* Mobile responsive design */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .button-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .add-note-button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  
+    .logo {
+      width: 30px; /* Smaller logo for mobile */
+    }
+  }
+  
