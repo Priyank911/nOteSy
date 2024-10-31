@@ -69,26 +69,24 @@
     margin-top: 5px;
   }
   
-  /* Mobile responsive design */
   @media (max-width: 768px) {
     .nav {
-      flex-direction: column;
-      align-items: flex-start;
+        flex-direction: row; /* Ensure items remain in one line */
+        justify-content: space-between;
     }
-  
-    .button-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+
+    .nav-content {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Adjust gap as needed */
     }
-  
-    .add-note-button {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
-  
+
     .logo {
-      width: 30px; /* Smaller logo for mobile */
+        width: 80px; /* Adjust for smaller screen */
     }
-  }
-  
+
+    .add-note-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
