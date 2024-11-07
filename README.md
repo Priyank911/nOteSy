@@ -1,73 +1,83 @@
-# Getting Started with Create React App
+# 📓 nOteSy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **nOteSy** – a modern and interactive prototype note-taking app. Built with **React** and **Firebase**, **nOteSy** provides a sleek dark theme and markdown support, making note management easy and visually engaging. While **nOteSy** is currently a work in progress, we’re excited to share what’s already functional!
 
-## Available Scripts
+![nOteSy Preview](https://github.com/Priyank911/nOteSy/blob/main/public/Notesy.png)
 
-In the project directory, you can run:
+> **Note**: This website is currently under maintenance, and our team is actively working to improve its features and functionality. You can explore it live on [Vercel](https://notesy-app.vercel.app/).
 
-### `npm start`
+## 🌟 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **🖋 Markdown Support**: Write notes in markdown and view live previews.
+- **🔒 User Roles**: Admins can create and edit notes, while Students have read-only access.
+- **🌑 Dark Theme**: An easy-on-the-eyes dark theme for an enjoyable experience.
+- **📱 Fully Responsive**: Optimized for both desktop and mobile devices.
+- **🔥 Firebase Integration**: Real-time data storage and retrieval.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+1. **Clone the Repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/yourusername/nOteSy.git
+   cd nOteSy
+   ```
 
-### `npm run build`
+2. **Install Dependencies**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Set Up Firebase**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Go to the [Firebase Console](https://console.firebase.google.com/) and create a project.
+   - Add Firebase config to `firebase.js`:
 
-### `npm run eject`
+     ```javascript
+     import { initializeApp } from 'firebase/app';
+     import { getFirestore } from 'firebase/firestore';
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+     const firebaseConfig = {
+       apiKey: "YOUR_API_KEY",
+       authDomain: "YOUR_AUTH_DOMAIN",
+       projectId: "YOUR_PROJECT_ID",
+       storageBucket: "YOUR_STORAGE_BUCKET",
+       messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+       appId: "YOUR_APP_ID"
+     };
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+     const app = initializeApp(firebaseConfig);
+     export const db = getFirestore(app);
+     ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Run the App**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+   Access it at [http://localhost:3000](http://localhost:3000).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```plaintext
+nOteSy/
+├── public/               # Static assets
+├── src/
+│   ├── components/       # Reusable React components
+│   ├── firebase.js       # Firebase configuration
+│   ├── App.js            # Main application file
+│   └── index.js          # Entry point for React
+├── .env                  # Firebase API keys (gitignored)
+├── README.md             # Project documentation
+└── package.json          # Dependencies and scripts
+```
 
-### Code Splitting
+## ✨ Key Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Navbar**: Interactive navigation with 3D hover effects and a MetaMask status indicator.
+- **NoteEditor**: Markdown editor for creating notes, editable for Admins, view-only for Students.
+- **NotesList**: Displays notes in a clean layout with hover effects showing the title and subject.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
+---
