@@ -19,7 +19,7 @@ Welcome to **nOteSy** – a modern and interactive prototype note-taking app. Bu
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/nOteSy.git
+   git clone https://github.com//Priyank911/nOteSy.git
    cd nOteSy
    ```
 
